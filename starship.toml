@@ -1,0 +1,30 @@
+[shlvl]
+disabled = false
+threshold = 1
+symbol = "↕️ "
+
+
+[os]
+disabled = false
+format = "$symbol "
+symbols.Arch = "  "
+
+[directory]
+truncation_length = 1
+format = '[\[$path\]]($style)[$read_only]($read_only_style)'
+read_only = '  '
+
+[cmd_duration]
+disabled = true
+
+[line_break]
+disabled = true
+
+[python]
+disabled = true
+
+[git_branch]
+format = ' on [$symbol$branch(:$remote_branch)]($style) '
+
+[c]
+format = ' via [$symbol($version(-$name) )]($style)'

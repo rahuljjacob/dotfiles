@@ -1,0 +1,16 @@
+.ARMSimLayout.xml
+clangd/
+dconf/
+fontconfig/
+kconf_updaterc
+kde.org/
+kdeglobals
+libreoffice/
+mimeapps.list
+pulse/
+script/
+spotify/
+systemd/
+teams-for-linux/
+trashrc
+wireshark/
