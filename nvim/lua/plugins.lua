@@ -1,7 +1,7 @@
 --Setup Lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  nmfao.fn.system({
+  vim.fn.system({
     "git",
     "clone",
     "--filter=blob:none",
@@ -180,6 +180,9 @@ require('lazy').setup({
         end,
       },
     },
+  },
+  {
+    'xiyaowong/transparent.nvim',
   },
 
   {

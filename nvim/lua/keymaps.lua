@@ -111,3 +111,6 @@ autocmd("FileType", { pattern = "c",
 	callback = function()
 		vim.api.nvim_buf_set_keymap(0,"n","<C-c>",":vsplit<CR>:te g++ -Wshadow -Wall % -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG && ./a.out<CR>i",opts)
 	end})
+
+
+
