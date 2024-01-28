@@ -1,22 +1,29 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: 'Montserrat', "Font Awesome 6 Free";
-    font-size: 15px;
+    font-size: 14px;
 	font-weight: 600;
 }
 
 window#waybar {
-	border-radius: 5px;
+    /*
+    border-radius: 5px;
     background-color: #25174f;
     border-bottom: #25174f;
     color: #25174f;
+    */
+    background-color : transparent;
     transition-property: background-color;
     transition-duration: .5s;
 }
 
 window#waybar.hidden {
     opacity: 0.2;
-	border-radius : 5px;
+}
+
+#workspaces{
+    background-color : #25174f;
+    border-radius : 5px;
 }
 
 /*
@@ -70,6 +77,11 @@ button:hover {
     background-color: #eb4d4b;
 }
 
+#workspaces button.active {
+    background-color: #4f3b8c;
+    border-radius : 5px;
+}
+
 #mode {
     background-color: #64727D;
     border-bottom: 3px solid #ffffff;
@@ -112,14 +124,13 @@ button:hover {
 
 #clock {
     background-color: #25174f;
+    border-radius: 5px;
 }
 
 #battery {
     background-color: #25174f;
     color: #ffffff;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	border-radius: 5px;
+    border-radius: 5px;
 }
 
 #battery.charging, #battery.plugged {
@@ -151,12 +162,12 @@ label:focus {
 #cpu {
     background-color: #25174f;
     color: #ffffff;
-	border-radius: 5px;
+    border-radius: 5px;
 }
 
 #memory {
     background-color: #25174f;
-	border-radius : 5px;
+    border-radius : 5px;
 }
 
 #disk {
@@ -169,9 +180,7 @@ label:focus {
 
 #network {
     background-color: #25174f;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	border-radius: 5px;
+    border-radius: 5px;
 }
 
 #network.disconnected {
@@ -181,6 +190,7 @@ label:focus {
 #pulseaudio {
     background-color: #25174f;
     color: #ffffff;
+    border-radius: 5px;
 }
 
 #pulseaudio.muted {
@@ -213,6 +223,7 @@ label:focus {
 
 #temperature {
     background-color: #25174f;
+    border-radius: 5px;
 }
 
 #temperature.critical {
@@ -220,7 +231,8 @@ label:focus {
 }
 
 #tray {
-    background-color: #2980b9;
+    background-color: #4f3b8c;
+    border-radius: 5px;
 }
 
 #tray > .passive {

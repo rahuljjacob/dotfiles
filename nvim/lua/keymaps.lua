@@ -75,17 +75,21 @@ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
-keymap({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+--keymap({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+--
+---- Remap for dealing with word wrap
+--keymap('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+--keymap('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+--
+---- Diagnostic keymaps
+--keymap('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
+--keymap('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
+--keymap('n', '<leader>j', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
+--keymap('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
--- Remap for dealing with word wrap
-keymap('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
-keymap('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+--Transparency
+keymap('n', '<leader>t',":TransparentToggle<CR>" ,opts)
 
--- Diagnostic keymaps
-keymap('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
-keymap('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
-keymap('n', '<leader>j', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-keymap('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
@@ -111,6 +115,3 @@ autocmd("FileType", { pattern = "c",
 	callback = function()
 		vim.api.nvim_buf_set_keymap(0,"n","<C-c>",":vsplit<CR>:te g++ -Wshadow -Wall % -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG && ./a.out<CR>i",opts)
 	end})
-
-
-
