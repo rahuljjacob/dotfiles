@@ -9,8 +9,8 @@
 	"margin-left" : 5,
 	"margin-right" : 5,
     "modules-left": ["hyprland/workspaces"],
-    //"modules-center": [],
-    "modules-right": ["pulseaudio", "network", "battery","clock", "tray"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "network", "battery","tray"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -28,6 +28,12 @@
     //         "default": ""
     //     }
     // },
+    //"group/leftgroup":{
+    //    "pulseaudio",
+    //    "network",
+    //    "battery",
+    //    "tray"
+    //},
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -116,7 +122,7 @@
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% 󰂄",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
@@ -128,7 +134,7 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "󰤨",
+        "format-wifi": "󰤨  ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",

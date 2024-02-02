@@ -109,9 +109,9 @@ autocmd("FileType", { pattern = "python",
 	end})
 autocmd("FileType", { pattern = "cpp",
 	callback = function()
-		vim.api.nvim_buf_set_keymap(0,"n","<C-c>",":split<CR>:te g++ -std=c++14 -Wshadow -Wall -o %:t:r % -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG && ./%:t:r<CR>i",opts)
+		vim.api.nvim_buf_set_keymap(0,"n","<C-c>",":split<CR>:te gcc -std=c++14 -Wshadow -Wall -o %:t:r % -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG && ./%:t:r<CR>i",opts)
 	end})
 autocmd("FileType", { pattern = "c",
 	callback = function()
-		vim.api.nvim_buf_set_keymap(0,"n","<C-c>",":vsplit<CR>:te g++ -Wshadow -Wall % -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG && ./a.out<CR>i",opts)
+		vim.api.nvim_buf_set_keymap(0,"n","<C-c>",":vsplit<CR>:te gcc -Wshadow -Wall % -g -fsanitize=address -fsanitize=undefined  && ./a.out<CR>i",opts)
 	end})

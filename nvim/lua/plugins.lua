@@ -137,7 +137,7 @@ require('lazy').setup({
 
   {
     -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
+    'rafamadriz/neon',
     priority = 1000,
     config = function()
     end,
@@ -149,13 +149,7 @@ require('lazy').setup({
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     -- See `:help lualine.txt`
     opts = {
-      options = {
-        icons_enabled = true,
-        theme = 'onedark',
-        component_separators = '|',
-        section_separators = '',
-      },
-    },
+          },
   },
 
   -- "gc" to comment visual regions/lines
