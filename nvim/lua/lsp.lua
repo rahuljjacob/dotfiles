@@ -124,7 +124,17 @@ local luasnip = require 'luasnip'
 require('luasnip.loaders.from_vscode').lazy_load()
 luasnip.config.setup {}
 
+
+
 cmp.setup {
+  window = {
+    documentation = cmp.config.window.bordered({
+      winhighlight = 'Normal:SignColumn,FloatBorder:SignColumn,CursorLine:Todo'
+    }),
+   	completion = cmp.config.window.bordered({
+      winhighlight = 'Normal:SignColumn,FloatBorder:SignColumn,CursorLine:Todo'
+    }),
+  },
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body)
@@ -163,8 +173,8 @@ cmp.setup {
     end, { 'i', 's' }),
   },
   sources = {
-    { name = 'nvim_lsp' },
     { name = 'luasnip' },
+    { name = 'nvim_lsp' },
     { name = 'path' },
   },
 }

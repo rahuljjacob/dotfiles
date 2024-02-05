@@ -1,6 +1,6 @@
 local colors = {
             darkwhite = "#16161d",
-            white = "#ffffff",
+            white = "#fffff0",
             innerbg = nil,
             outerbg = "#16161D",
             normal = "#7e9cd8",
