@@ -113,5 +113,11 @@ autocmd("FileType", { pattern = "cpp",
 	end})
 autocmd("FileType", { pattern = "c",
 	callback = function()
-		vim.api.nvim_buf_set_keymap(0,"n","<C-c>",":vsplit<CR>:te gcc -Wshadow -Wall % -g -fsanitize=address -fsanitize=undefined  && ./a.out<CR>i",opts)
+		vim.api.nvim_buf_set_keymap(0,"n","<C-c>",":vsplit<CR>:te gcc  % -g  && ./a.out<CR>i",opts)
 	end})
+autocmd("FileType", { pattern = "rust",
+	callback = function()
+		vim.api.nvim_buf_set_keymap(0,"n","<C-c>",":vsplit<CR>:te rustc % -g  && ./%:t:r<CR>i",opts)
+	end})
+
+---Wshadow -Wall -fsanitize=address -fsanitize=undefined 

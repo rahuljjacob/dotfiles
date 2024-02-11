@@ -146,6 +146,7 @@ require('lazy').setup({
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
+    priority = 999,
     -- See `:help lualine.txt`
     opts = {
           },
@@ -190,5 +191,8 @@ require('lazy').setup({
       'windwp/nvim-autopairs',
       event = "InsertEnter",
       opts = {} -- this is equalent to setup({}) function
+  },
+  {
+    'norcalli/nvim-colorizer.lua'
   }
 }, {})

@@ -2,7 +2,7 @@
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: 'Montserrat', "Font Awesome 6 Free";
     font-size: 14px;
-	font-weight: 600;
+    font-weight: 600;
 }
 
 window#waybar {
