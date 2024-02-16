@@ -45,7 +45,7 @@ keymap("n", "<A-j>", ":m .+1<CR>==", opts)
 keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 
 --Explore Files 
-keymap("n", "<Leader>e", ":Explore<CR>", opts)
+keymap("n", "<Leader>e", "<CMD>Oil<CR>", opts)
 -- Insert --
 -- Press jk fast to exit insert mode 
 keymap("i", "jk", "<ESC>", opts)
@@ -74,6 +74,7 @@ keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
 keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+
 
 --keymap({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 --

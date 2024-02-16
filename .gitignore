@@ -21,4 +21,5 @@ discordcanary/
 fabric/
 Kingsoft/
 whatsapp-for-linux/
-nvim/lazy-lock.json
+lazy-lock.json
+flameshot/
