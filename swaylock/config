@@ -1,0 +1,37 @@
+ignore-empty-password
+font="Iosevka NFM Bold"
+
+clock
+timestr=%R
+datestr=%a, %e %B
+
+# Add current screenshot as wallpaper
+screenshots
+
+# Add an image as a background 
+#image= ~/.config/assets/Wallpapers/escape_velocity.jpg
+
+# Fade in time
+
+# Effect for background
+effect-blur=6x2
+# effect-greyscale
+# effect-pixelate=5
+
+# Show/Hide indicator circle
+indicator
+
+# smaller indicator
+indicator-radius=120
+
+# bigger indicator
+# indicator-radius=300
+
+key-hl-color=503991
+separator-color=00000000
+
+ring-color=301282
+ring-clear-color=301282
+ring-caps-lock-color=8224ab
+ring-ver-color=231f20D9
+ring-wrong-color=ad1f4f
