@@ -124,15 +124,13 @@ local luasnip = require 'luasnip'
 require('luasnip.loaders.from_vscode').lazy_load()
 luasnip.config.setup {}
 
-
-
 cmp.setup {
   window = {
     documentation = cmp.config.window.bordered({
-      winhighlight = 'Normal:SignColumn,FloatBorder:SignColumn,CursorLine:Todo'
+      winhighlight = 'Normal:Conditional,FloatBorder:Conditional,CursorLine:Todo'
     }),
    	completion = cmp.config.window.bordered({
-      winhighlight = 'Normal:SignColumn,FloatBorder:SignColumn,CursorLine:Todo'
+      winhighlight = 'Normal:Keyword,FloatBorder:Conditional,CursorLine:Todo'
     }),
   },
   snippet = {

@@ -1,8 +1,12 @@
 font_family Iosevka NF Semibold
-background_opacity 0.8
+background_opacity 0.6
 cursor_blink_interval 0
+enable_audio_bell no
+
+#tab_styling
+tab_bar_style powerline
 
 # BEGIN_KITTY_THEME
-# Liquid Carbon Transparent
+# Atom
 include current-theme.conf
 # END_KITTY_THEME

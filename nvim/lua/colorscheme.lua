@@ -29,6 +29,10 @@
 --
 --}
 --require("onedark").load()
---
-vim.g.neon_transparent = true
-vim.cmd[[colorscheme neon]]
+
+require("catppuccin").setup({
+    transparent_background = true, -- disables setting the background color.
+})
+
+-- setup must be called before loading
+vim.cmd.colorscheme "catppuccin"

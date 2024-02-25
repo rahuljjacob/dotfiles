@@ -134,13 +134,13 @@ require('lazy').setup({
   --  },
   --},
 
+
   {
-    -- Theme inspired by Atom
-    'rafamadriz/neon',
-    priority = 1000,
-    config = function()
-    end,
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 100
   },
+
 
   {
     -- Set lualine as statusline
@@ -153,7 +153,7 @@ require('lazy').setup({
   },
 
   -- "gc" to comment visual regions/lines
-  -- { 'numToStr/Comment.nvim', opts = {} },
+  { 'numToStr/Comment.nvim', opts = {} },
 
   -- Fuzzy Finder (files, lsp, etc)
   {

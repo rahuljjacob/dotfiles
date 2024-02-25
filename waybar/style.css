@@ -79,7 +79,7 @@ button:hover {
 }
 
 #workspaces button.active {
-    background-color: #273d61;
+    background-color: #3e3c40;
     border-radius : 5px;
 }
 
