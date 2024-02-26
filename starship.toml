@@ -3,9 +3,8 @@ disabled = false
 threshold = 1
 symbol = "↕️ "
 
-
 [os]
-disabled = false
+disabled = true 
 format = "$symbol "
 symbols.Arch = " "
 
