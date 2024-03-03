@@ -127,10 +127,10 @@ luasnip.config.setup {}
 cmp.setup {
   window = {
     documentation = cmp.config.window.bordered({
-      winhighlight = 'Normal:Conditional,FloatBorder:Conditional,CursorLine:Todo'
+      winhighlight = 'Normal:Conditional,FloatBorder:Conditional,CursorLine:String'
     }),
    	completion = cmp.config.window.bordered({
-      winhighlight = 'Normal:Keyword,FloatBorder:Conditional,CursorLine:Todo'
+      winhighlight = 'Normal:Keyword,FloatBorder:Conditional,CursorLine:String'
     }),
   },
   snippet = {
@@ -176,6 +176,5 @@ cmp.setup {
     { name = 'path' },
   },
 }
-
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

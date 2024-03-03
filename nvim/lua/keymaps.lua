@@ -89,7 +89,7 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 --keymap('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 --Transparency
---keymap('n', '<leader>t',":TransparentToggle<CR>" ,opts)
+keymap('n', '<leader>t',":TransparentToggle<CR>" ,opts)
 
 
 -- [[ Highlight on yank ]]

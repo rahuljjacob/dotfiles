@@ -200,5 +200,10 @@ require('lazy').setup({
     opts = {},
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+  {
+    'xiyaowong/transparent.nvim',
+    opts = {},
+    dependencies = {}
   }
 }, {})
