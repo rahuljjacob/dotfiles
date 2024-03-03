@@ -176,10 +176,6 @@ require('lazy').setup({
     },
   },
   {
-    'xiyaowong/transparent.nvim',
-  },
-
-  {
     -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
@@ -201,9 +197,4 @@ require('lazy').setup({
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
-  {
-    'xiyaowong/transparent.nvim',
-    opts = {},
-    dependencies = {}
-  }
-}, {})
+  }, {})

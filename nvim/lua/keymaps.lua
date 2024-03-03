@@ -88,10 +88,6 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 --keymap('n', '<leader>j', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 --keymap('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
---Transparency
-keymap('n', '<leader>t',":TransparentToggle<CR>" ,opts)
-
-
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })

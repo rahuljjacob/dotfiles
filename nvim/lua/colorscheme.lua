@@ -31,7 +31,7 @@
 --require("onedark").load()
 
 require("catppuccin").setup({
-    transparent_background = false, -- disables setting the background color.
+    transparent_background = true, -- disables setting the background color.
 })
 
 -- setup must be called before loading
