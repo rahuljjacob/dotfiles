@@ -1,1 +1,0 @@
-kitten @ set-background-opacity 0.7
