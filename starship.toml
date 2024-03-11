@@ -20,7 +20,8 @@ disabled = true
 disabled = true
 
 [python]
-disabled = true
+disabled = false
+format = '[(\($virtualenv\) )]($style)'
 
 [git_branch]
 format = 'on [$symbol$branch(:$remote_branch)]($style) '
