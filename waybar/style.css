@@ -78,11 +78,6 @@ button:hover {
     border-radius : 5px;
 }
 
-#workspaces button.active {
-    background-color: #3e3c40;
-    border-radius : 5px;
-}
-
 #mode {
     background-color: #64727D;
     border-bottom: 3px solid #ffffff;

@@ -197,4 +197,7 @@ require('lazy').setup({
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
+  {
+    'goolord/alpha-nvim'
+  },-- lazy.nvim
   }, {})

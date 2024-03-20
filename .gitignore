@@ -29,3 +29,5 @@ QtProject.conf
 audacity/
 sonic-visualiser/
 vlc/
+rofi/
+dunst/
