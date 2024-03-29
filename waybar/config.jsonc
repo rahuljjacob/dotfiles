@@ -10,7 +10,7 @@
 	"margin-right" : 12,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network", "battery","tray"],
+    "modules-right": ["group/leftgroup"],
     // Modules configuration
      "hyprland/workspaces": {
 	"format": "{icon}",
@@ -20,12 +20,15 @@
 	    "empty": "⍜"
 	},
     },
-    //"group/leftgroup":{
-    //    "pulseaudio",
-    //    "network",
-    //    "battery",
-    //    "tray"
-    //},
+    "group/leftgroup":{
+        "orientation": "horizontal",
+        "modules" : [
+            "pulseaudio",
+            "network",
+            "battery",
+            "tray"
+        ]
+    },
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -126,7 +129,7 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "󰤨  ",
+        "format-wifi": "󰤨 ",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
