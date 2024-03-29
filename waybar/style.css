@@ -1,7 +1,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: 'Montserrat', "Font Awesome 6 Free";
-    font-size: 14px;
+    font-family: 'Iosevka', "Font Awesome 6 Free";
+    font-size: 13px;
     font-weight: 600;
 }
 
@@ -12,9 +12,10 @@ window#waybar {
     border-bottom: transparent;
     color: transparent;
     */
-    background-color : transparent;
+    background-color : #414868 ;
     transition-property: background-color;
     transition-duration: .5s;
+    border-radius : 7px;
 }
 
 window#waybar.hidden {

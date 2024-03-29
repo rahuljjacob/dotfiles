@@ -141,6 +141,12 @@ require('lazy').setup({
     opts = {},
   },
   {
+    "navarasu/onedark.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+  {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' },

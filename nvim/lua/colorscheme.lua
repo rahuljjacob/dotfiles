@@ -1,4 +1,6 @@
-require("tokyonight").setup({
-    transparent = true,
-})
-vim.cmd[[colorscheme tokyonight]]
+-- Lua
+require('onedark').setup {
+    style = 'darker',
+    transparent = true,  -- Show/hide background
+}
+require('onedark').load()

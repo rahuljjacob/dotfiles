@@ -1,13 +1,13 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 20, // Waybar height (to be removed for auto height)
+    "height": 26, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-	"margin-top" : 5,
-	"margin-left" : 5,
-	"margin-right" : 5,
+	"margin-top" : 10,
+	"margin-left" : 12,
+	"margin-right" : 12,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
     "modules-right": ["pulseaudio", "network", "battery","tray"],
@@ -16,7 +16,7 @@
 	"format": "{icon}",
         "format-icons": {
 	    "active": "⏺",
-	    "default": "⊙",
+	    "default": "⦿",
 	    "empty": "⍜"
 	},
     },
