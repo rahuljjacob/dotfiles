@@ -133,18 +133,10 @@ require('lazy').setup({
   --    end,
   --  },
   --},
-
   {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
-  },
-  {
-    "navarasu/onedark.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {},
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000
   },
   {
     -- Set lualine as statusline

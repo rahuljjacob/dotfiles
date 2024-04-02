@@ -10,7 +10,7 @@
 	"margin-right" : 12,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["group/leftgroup"],
+    "modules-right": ["tray", "group/leftgroup"],
     // Modules configuration
      "hyprland/workspaces": {
 	"format": "{icon}",
@@ -26,7 +26,6 @@
             "pulseaudio",
             "network",
             "battery",
-            "tray"
         ]
     },
     "keyboard-state": {
