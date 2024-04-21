@@ -29,6 +29,12 @@ window#waybar.hidden {
     border-radius : 5px;
 }
 
+#custom-powerbutton{
+    background-color : #414868;
+    border-radius : 5px;
+    color : red;
+}
+
 /*
 window#waybar.empty {
     background-color: transparent;
@@ -124,13 +130,13 @@ button:hover {
 
 #clock {
     background-color: #414868; 
-    border-radius: 5px;
+    border-radius: 0px 7px 7px 0px;
 }
 
 #battery {
     background-color: #414868;
     color: #ffffff;
-    border-radius: 0px 7px 7px 0px;
+    /*border-radius: 0px 7px 7px 0px;*/
 }
 
 #battery.charging, #battery.plugged {
@@ -189,9 +195,9 @@ label:focus {
 #pulseaudio {
     background-color: #414868;
     color: #ffffff;
-    border-radius: 7px 0px 0px 7px;
     padding-right: 10px;
     margin-left : 0px;
+    border-radius : 7px 0px 0px 7px;
 }
 
 #pulseaudio.muted {
