@@ -71,3 +71,8 @@ vim.defer_fn(function()
     },
   }
 end, 0)
+
+-- To parse hyprland config files
+vim.filetype.add({
+  pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
+})

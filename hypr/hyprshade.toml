@@ -1,0 +1,16 @@
+[[shades]]
+name = "blue1"
+start_time = 18:30:00
+
+[[shades]]
+name = "blue2"
+start_time = 20:00:00
+
+[[shades]]
+name = "blue3"
+start_time = 22:00:00
+
+[[shades]]
+name = "blue4"
+start_time = 01:00:00
+end_time = 06:00:00
