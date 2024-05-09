@@ -1,5 +1,5 @@
 font_family Iosevka NF Semibold
-background_opacity 0.65
+background_opacity 0.75
 cursor_blink_interval 0
 enable_audio_bell no
 window_padding_width 1 0 0 3
@@ -7,12 +7,12 @@ dynamic_background_opacity yes
 allow_remote_control yes
 
 map f10 remote_control set-background-opacity 1
-map f11 remote_control set-background-opacity 0.65
+map f11 remote_control set-background-opacity 0.75
 
 #tab_styling
 tab_bar_style powerline
 
 # BEGIN_KITTY_THEME
-# Black Metal
+# Corvine
 include current-theme.conf
 # END_KITTY_THEME
