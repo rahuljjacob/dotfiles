@@ -2,7 +2,7 @@ font_family Iosevka NF Semibold
 background_opacity 0.75
 cursor_blink_interval 0
 enable_audio_bell no
-window_padding_width 1 0 0 3
+window_padding_width 1 2 0 3
 dynamic_background_opacity yes
 allow_remote_control yes
 
@@ -13,6 +13,6 @@ map f11 remote_control set-background-opacity 0.75
 tab_bar_style powerline
 
 # BEGIN_KITTY_THEME
-# Corvine
+# Gruvbox Dark
 include current-theme.conf
 # END_KITTY_THEME

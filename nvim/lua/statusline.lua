@@ -3,10 +3,10 @@ local colors = {
             white = "#ffffff",
             innerbg = nil,
             outerbg = "#16161D",
-            normal = "#7e9cd8",
-            insert = "#98bb6c",
-            visual = "#ffa066",
-            replace = "#e46876",
+            normal = "#7DAEA3",
+            insert = "#89B482",
+            visual = "#EA6962",
+            replace = "#ffa066",
             command = "#e6c384",
 }
 

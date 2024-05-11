@@ -136,7 +136,11 @@ require('lazy').setup({
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    priority = 1000
+    priority = 999,
+  },
+  {
+    'sainnhe/gruvbox-material',
+    priority = 1000,
   },
   {
     -- Set lualine as statusline
