@@ -8,7 +8,7 @@ map ! feedkeys "<F1><Return><F2><Return>"
 
 # amber on dark slate        
 map <F3> focus_inputbar ":set recolor-lightcolor \#282828" 
-map <F4> focus_inputbar ":set recolor-darkcolor \#ffffff"    
+map <F4> focus_inputbar ":set recolor-darkcolor \#F7EBC1"    
 map @ feedkeys "<F3><Return><F4><Return>"    
 
 map <F6> focus_inputbar ":set recolor-lightcolor \#ffffff"    
