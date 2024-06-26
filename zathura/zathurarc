@@ -1,14 +1,24 @@
 set selection-clipboard clipboard
 set recolor true
 
+set scroll-page-aware "true"
+set scroll-full-overlap 0.01
+set scroll-step 70
+
+map j feedkeys "<C-Down>"
+map k feedkeys "<C-Up>"
+
+set font "Iosevka Fixed 9"
+
 # midnight mode    
 map <F1> focus_inputbar ":set recolor-lightcolor \#002b36"    
 map <F2> focus_inputbar ":set recolor-darkcolor \#839496"    
 map ! feedkeys "<F1><Return><F2><Return>"    
 
 # amber on dark slate        
-map <F3> focus_inputbar ":set recolor-lightcolor \#282828" 
-map <F4> focus_inputbar ":set recolor-darkcolor \#F7EBC1"    
+map <F3> focus_inputbar ":set recolor-lightcolor \#191724"
+map <F4> focus_inputbar ":set recolor-darkcolor \#DED8E6"
+
 map @ feedkeys "<F3><Return><F4><Return>"    
 
 map <F6> focus_inputbar ":set recolor-lightcolor \#ffffff"    
@@ -20,9 +30,6 @@ map <F8> focus_inputbar ":set recolor-lightcolor \#000000"
 map <F9> focus_inputbar ":set recolor-darkcolor \#ffffff"    
 map $ feedkeys "<F8><Return><F9><Return>"  
 
-map <F8> focus_inputbar ":set recolor-lightcolor \"    
-map <F9> focus_inputbar ":set recolor-darkcolor \"    
+map <F8> focus_inputbar ":set recolor-lightcolor \#000000"    
+map <F9> focus_inputbar ":set recolor-darkcolor \#ffffff"    
 map % feedkeys "<F8><Return><F9><Return>"  
-
-
-

@@ -8,29 +8,106 @@
 	"margin-top" : 8,
 	"margin-left" : 9,
 	"margin-right" : 9,
-    "modules-left": ["tray"],
-    "modules-center": ["hyprland/workspaces"],
+    "modules-left": ["group/rightgroup", "hyprland/workspaces"],
+    "modules-center": [],
     "modules-right": ["group/leftgroup"],
     // Modules configuration
      "hyprland/workspaces": {
 	"format": "{icon}",
         "format-icons": {
-	    "active": "⏺",
-	    "default": "○",
-	    "empty": ""
-	},
+            "1": "ニ",
+            "2": "ボ",
+            "3": "ヌ",
+            "4": "テ",
+            "5": "サ",
+            "6": "モ",
+            "7": "ネ",
+            "8": "ヰ",
+            "9": "ヱ",
+            "10": "ト"
+        }
     },
-    "custom/powerbutton":{
-        "format" : " 󰐥 ",
-        "on-click" : "bash ~/.config/rofi/scripts/powermenu_t6"
+    "group/trrray":{
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 200,
+            "children-class": "trayy",
+            "transition-left-to-right": true,
+        },
+        "modules" :[
+            "custom/logo",
+            "tray"
+        ],
+    },
+
+    "group/rightgroup":{
+        
+        "orientation": "horizontal",
+        "modules" : [
+            "group/trrray",
+            "custom/weather"
+        ]
+    },
+
+    "custom/weather": {
+        "format": "{}°",
+        "tooltip": true,
+        "interval": 3600,
+        "exec": "wttrbar --date-format \"%m/%d\" --location Hyderabad --hide-conditions",
+        "return-type": "json"
+    },
+
+    "custom/logo":{
+        "format" : "󰣇",
     },
     "group/leftgroup":{
         "orientation": "horizontal",
         "modules" : [
             "pulseaudio",
             "battery",
-            "clock"
+            "clock",
+            "group/group-power"
         ]
+    },
+    "group/group-power": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 200,
+            "children-class": "not-power",
+            "transition-left-to-right": false,
+        },
+        "modules": [
+            "custom/power", // First element is the "group leader" and won't ever be hidden
+            "custom/suspend",
+            "custom/quit",
+            "custom/lock",
+            "custom/reboot"
+        ]
+    },
+    "custom/quit": {
+        "format": "﫼",
+        "tooltip": false,
+        "on-click": "hyprctl dispatch exit"
+    },
+    "custom/suspend": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "systemctl suspend"
+    },
+    "custom/lock": {
+        "format": "󰍁",
+        "tooltip": false,
+        "on-click": "hyprlock"
+    },
+    "custom/reboot": {
+        "format": "󰜉",
+        "tooltip": false,
+        "on-click": "reboot"
+    },
+    "custom/power": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "shutdown now"
     },
     "keyboard-state": {
         "numlock": true,
@@ -90,8 +167,9 @@
     },
     "clock": {
         // "timezone": "America/New_York",
+        "format":  " {:%H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%d-%m-%Y}"
+        "format-alt": "  {:%d-%m-%Y}"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -125,7 +203,7 @@
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰁹"]
     },
     "battery#bat2": {
         "bat": "BAT2"
@@ -137,21 +215,16 @@
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "󰖪",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "on-click" : "nm-applet"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon} ",
+        "format-bluetooth": "{volume}% ",
         "format-bluetooth-muted": " {icon}",
-        "format-muted": " ",
+        "format-muted": " ",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
@@ -162,7 +235,7 @@
         "max-length": 40,
         "format-icons": {
             "spotify": "",
-            "default": "🎜"
+            "default": ""
         },
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder

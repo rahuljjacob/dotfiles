@@ -21,9 +21,8 @@ discordcanary/
 Kingsoft/
 whatsapp-for-linux/
 nvim/lazy-lock.json
-flameshot/
 Electron/
-eww/
+wandb/
 QtProject.conf
 audacity/
 sonic-visualiser/
@@ -37,7 +36,9 @@ btop/
 ags/
 bluetuith/
 nautilus/
-spicetify/
 gtk-3.0/
-nwg-look/
 xsettingsd/
+Hyprland-xdg-terminals.list
+pavucontrol.ini
+xdg-terminals.list
+BetterDiscord/

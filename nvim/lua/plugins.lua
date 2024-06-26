@@ -139,8 +139,8 @@ require('lazy').setup({
     priority = 999,
   },
   {
-    'sainnhe/gruvbox-material',
-    priority = 1000,
+    "rose-pine/neovim",
+    as = "rose-pine"
   },
   {
     -- Set lualine as statusline

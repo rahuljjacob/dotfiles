@@ -106,7 +106,7 @@ autocmd("FileType", { pattern = "python",
 	end})
 autocmd("FileType", { pattern = "cpp",
 	callback = function()
-		vim.api.nvim_buf_set_keymap(0,"n","<C-c>",":split<CR>:te gcc -std=c++14 -Wshadow -Wall -o %:t:r % -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG && ./%:t:r<CR>i",opts)
+		vim.api.nvim_buf_set_keymap(0,"n","<C-c>",":split<CR>:te g++ -std=c++23 -Wshadow -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion -Werror -o %:t:r % -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG && ./%:t:r<CR>i",opts)
 	end})
 autocmd("FileType", { pattern = "c",
 	callback = function()

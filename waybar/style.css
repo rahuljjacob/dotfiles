@@ -1,8 +1,8 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: 'Iosevka', "Font Awesome 6 Free";
+    font-family: 'Barlow', "Font Awesome 6 Free";
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 
@@ -22,19 +22,61 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-#workspaces{
-    background-color : rgba(65,72,104,0);
-    border-radius : 5px;
-    color: #F7EBC1;
+
+
+#custom-weather{
+    background-color :#1A1824;
+    color: #9CCFD8;
+    border-radius : 0px 5px 5px 0px;
+    padding-right : 7px;
 }
 
-#custom-powerbutton{
-    background-color : rgba(65,72,104,0);
-    border-radius : 5px;
-    color : red;
-
-
+#custom-power{
+    background-color :#1A1824;
+    padding-left: 4px;
+    padding-right: 10px;
+    border-radius : 0px 5px 5px 0px;
+    color: #EBBCBA;
+    padding-top: 2px;
+    padding-bottom: 1px;
 }
+
+#custom-logo{
+    background-color :#1A1824;
+    border-radius : 5px 0px 0px 5px;
+    padding-left: 8px;
+    padding-right: 11px;
+    color: #9CCFD8;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#custom-suspend{
+    background-color :#1A1824;
+    padding-left: 10px;
+    padding-right: 2px;
+    color: #EBBCBA;
+}       
+
+#custom-quit{
+    background-color :#1A1824;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #EBBCBA;
+}
+#custom-lock{
+    background-color :#1A1824;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #EBBCBA;
+}
+#custom-reboot{
+    background-color :#1A1824;
+    padding-left: 10px;
+    padding-right: 15px;
+    color: #EBBCBA;
+}
+
 
 /*
 window#waybar.empty {
@@ -43,8 +85,6 @@ window#waybar.empty {
 window#waybar.solo {
     background-color: #FFFFFF;
 }
-*/
-
 window#waybar.termite {
     background-color: #3F3F3F;
 }
@@ -53,6 +93,7 @@ window#waybar.chromium {
     background-color: transparent;
     border: none;
 }
+*/
 
 button {
     /* Use box-shadow instead of border so the text isn't offset */
@@ -71,24 +112,23 @@ button:hover {
 
 #workspaces button {
     padding: 0 5px;
-    background-color: transparent;
-    color: #F7EBC1;
+    color: #2F3041;
 }
 
 #workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
-    color: #F7EBC1;
+    background: #1A1824;
+    color: #EBBCBA;
 }
 
 #workspaces button.focused {
-    color: #F7EBC1;
-    background-color: #64727D;
+    color: #EBBCBA;
     box-shadow: inset 0 -2px #ffffff;
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+    background-color : #1A1824;
     border-radius : 5px;
+    color : #eb4d4b;
 }
 
 #mode {
@@ -116,10 +156,18 @@ button:hover {
     color: #ffffff;
 }
 
+
 #window,
-#workspaces {
-    margin: 0 4px;
-    color: #F7EBC1;
+#workspaces{
+    background-color :#1A1824 ;
+    border-radius : 5px;
+    padding-top: 2px;
+    padding-bottom: 1px;
+
+}
+
+#workspaces button.active {
+  color: #9CCFD8;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -133,21 +181,23 @@ button:hover {
 }
 
 #clock {
-    background-color: rgba(65,72,104,0); 
-    border-radius: 0px 7px 7px 0px;
-    color: #F7EBC1;
+    color: #9CCFD8;
+    background-color: #1A1824;
+    padding-top: 2px;
+    padding-bottom: 3px;
 }
 
 #battery {
-    background-color: rgba(65,72,104,0);
+    background-color: #1A1824;
     /*border-radius: 0px 7px 7px 0px;*/
-    color: #F7EBC1;
+    color: #9CCFD8;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 #battery.charging, #battery.plugged {
     color: #ffffff;
     background-color: #26A65B;
-    border-radius : 7px;
 }
 
 @keyframes blink {
@@ -195,16 +245,16 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: rgba(65,72,104,0);
-    color: #F7EBC1;
-    padding-right: 10px;
-    margin-left : 0px;
-    border-radius : 7px 0px 0px 7px;
+    background-color: #1A1824;
+    color: #9CCFD8;
+    border-radius : 5px 0px 0px 5px;
+    padding-top: 2px;
+    padding-bottom: 1px;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+    background-color: #1A1824;
+    color: #9CCFD8;
 }
 
 #wireplumber {
@@ -240,8 +290,7 @@ label:focus {
 }
 
 #tray {
-    background-color: rgba(65,72,104,0);
-    border-radius: 5px;
+    background-color: #1A1824;
 }
 
 #tray > .passive {
