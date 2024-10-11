@@ -1,7 +1,7 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 24, // Waybar height (to be removed for auto height)
+    "height": 26, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
@@ -24,7 +24,8 @@
             "7": "ネ",
             "8": "ヰ",
             "9": "ヱ",
-            "10": "ト"
+            "10": "ト",
+            "11": "ガ"
         }
     },
     "group/trrray":{
@@ -32,12 +33,12 @@
         "drawer": {
             "transition-duration": 200,
             "children-class": "trayy",
-            "transition-left-to-right": true,
+            "transition-left-to-right": true
         },
         "modules" :[
             "custom/logo",
             "tray"
-        ],
+        ]
     },
 
     "group/rightgroup":{
@@ -53,12 +54,12 @@
         "format": "{}°",
         "tooltip": true,
         "interval": 3600,
-        "exec": "wttrbar --date-format \"%m/%d\" --location Hyderabad --hide-conditions",
+        "exec": "wttrbar --date-format \"%m/%d\" --location Bangalore --hide-conditions",
         "return-type": "json"
     },
 
     "custom/logo":{
-        "format" : "󰣇",
+        "format" : "󰣇"
     },
     "group/leftgroup":{
         "orientation": "horizontal",
@@ -74,7 +75,7 @@
         "drawer": {
             "transition-duration": 200,
             "children-class": "not-power",
-            "transition-left-to-right": false,
+            "transition-left-to-right": false
         },
         "modules": [
             "custom/power", // First element is the "group leader" and won't ever be hidden
@@ -203,7 +204,7 @@
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰁹"]
+        "format-icons": ["", "", "", "", ""]
     },
     "battery#bat2": {
         "bat": "BAT2"

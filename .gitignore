@@ -42,3 +42,7 @@ Hyprland-xdg-terminals.list
 pavucontrol.ini
 xdg-terminals.list
 BetterDiscord/
+go/
+gtk-4.0/
+libadwaita-tc.py
+nwg-look/

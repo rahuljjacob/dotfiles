@@ -127,10 +127,10 @@ luasnip.config.setup {}
 cmp.setup {
   window = {
     documentation = cmp.config.window.bordered({
-      winhighlight = 'Normal:Conditional,FloatBorder:Conditional,CursorLine:String'
+      winhighlight = 'Normal:Directory,FloatBorder:Directory,CursorLine:Character'
     }),
    	completion = cmp.config.window.bordered({
-      winhighlight = 'Normal:Keyword,FloatBorder:Conditional,CursorLine:String'
+      winhighlight = 'Normal:Directory,FloatBorder:Directory,CursorLine:Character'
     }),
   },
   snippet = {

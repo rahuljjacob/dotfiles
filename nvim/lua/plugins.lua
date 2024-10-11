@@ -56,6 +56,23 @@ require('lazy').setup({
       'rafamadriz/friendly-snippets',
     },
   },
+  {
+    "kawre/leetcode.nvim",
+    build = ":TSUpdate html",
+    dependencies = {
+        "nvim-telescope/telescope.nvim",
+        "nvim-lua/plenary.nvim", -- required by telescope
+        "MunifTanjim/nui.nvim",
+
+        -- optional
+        "nvim-treesitter/nvim-treesitter",
+        "rcarriga/nvim-notify",
+        "nvim-tree/nvim-web-devicons",
+    },
+    opts = {
+        -- configuration goes here
+    },
+  },
 
   -- Useful plugin to show you pending keybinds.
   --{ 'folke/which-key.nvim', opts = {} },
@@ -138,9 +155,9 @@ require('lazy').setup({
     name = "catppuccin",
     priority = 999,
   },
-  {
-    "rose-pine/neovim",
-    as = "rose-pine"
+  { 
+	  'Everblush/nvim', 
+	  name = 'everblush' 
   },
   {
     -- Set lualine as statusline
@@ -200,4 +217,8 @@ require('lazy').setup({
   {
     'goolord/alpha-nvim'
   },-- lazy.nvim
+  {
+    'stevearc/conform.nvim',
+    opts = {},
+  }
   }, {})

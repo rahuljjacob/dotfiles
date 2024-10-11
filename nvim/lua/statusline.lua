@@ -2,12 +2,12 @@ local colors = {
             darkwhite = "#16161d",
             white = "#ffffff",
             innerbg = nil,
-            outerbg = "#16161D",
-            normal = "#7DAEA3",
-            insert = "#89B482",
-            visual = "#EA6962",
+            outerbg = "#141B1E",
+            normal = "#8CCF7E",
+            insert = "#E182E0",
+            visual = "#6CBFBF",
             replace = "#ffa066",
-            command = "#e6c384",
+            command = "#E57474",
 }
 
 local bubbles_theme = {
@@ -72,3 +72,5 @@ require('lualine').setup {
   tabline = {},
   extensions = {},
 }
+
+
