@@ -44,10 +44,10 @@ keymap("n", "<leader>e", ":Explore", opts)
 keymap("n", "<A-j>", ":m .+1<CR>==", opts)
 keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 
---Explore Files 
+--Explore Files
 keymap("n", "<Leader>e", "<CMD>Oil<CR>", opts)
 -- Insert --
--- Press jk fast to exit insert mode 
+-- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
 
@@ -75,7 +75,6 @@ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
-
 --keymap({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 --
 ---- Remap for dealing with word wrap
@@ -90,31 +89,45 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
-local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
-vim.api.nvim_create_autocmd('TextYankPost', {
+local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
+vim.api.nvim_create_autocmd("TextYankPost", {
   callback = function()
     vim.highlight.on_yank()
   end,
   group = highlight_group,
-  pattern = '*',
+  pattern = "*",
 })
 
 -- autocompile
-autocmd("FileType", { pattern = "python",
-	callback = function()
-		vim.api.nvim_buf_set_keymap(0,"n","<C-c>",":vsplit<CR>:te python3 '%'<CR>i",opts)
-	end})
-autocmd("FileType", { pattern = "cpp",
-	callback = function()
-		vim.api.nvim_buf_set_keymap(0,"n","<C-c>",":split<CR>:te g++ -std=c++23 -Wshadow -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion -Werror -o %:t:r % -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG && ./%:t:r<CR>i",opts)
-	end})
-autocmd("FileType", { pattern = "c",
-	callback = function()
-		vim.api.nvim_buf_set_keymap(0,"n","<C-c>",":vsplit<CR>:te gcc  % -g  && ./a.out<CR>i",opts)
-	end})
-autocmd("FileType", { pattern = "rust",
-	callback = function()
-		vim.api.nvim_buf_set_keymap(0,"n","<C-c>",":vsplit<CR>:te rustc % -g  && ./%:t:r<CR>i",opts)
-	end})
+autocmd("FileType", {
+  pattern = "python",
+  callback = function()
+    vim.api.nvim_buf_set_keymap(0, "n", "<C-c>", ":vsplit<CR>:te python3 '%'<CR>i", opts)
+  end,
+})
+autocmd("FileType", {
+  pattern = "cpp",
+  callback = function()
+    vim.api.nvim_buf_set_keymap(
+      0,
+      "n",
+      "<C-c>",
+      ":split<CR>:te g++ -std=c++23 -Wshadow -Wall -Weffc++ -Wextra -Wconversion -Wsign-conversion -Werror -o %:t:r % -g -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG && ./%:t:r<CR>i",
+      opts
+    )
+  end,
+})
+autocmd("FileType", {
+  pattern = "c",
+  callback = function()
+    vim.api.nvim_buf_set_keymap(0, "n", "<C-c>", ":vsplit<CR>:te gcc  % -g  && ./a.out<CR>i", opts)
+  end,
+})
+autocmd("FileType", {
+  pattern = "rust",
+  callback = function()
+    vim.api.nvim_buf_set_keymap(0, "n", "<C-c>", ":vsplit<CR>:te rustc % -g  && ./%:t:r<CR>i", opts)
+  end,
+})
 
----Wshadow -Wall -fsanitize=address -fsanitize=undefined 
+---Wshadow -Wall -fsanitize=address -fsanitize=undefined
