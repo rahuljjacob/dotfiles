@@ -33,7 +33,6 @@ torbrowser/
 Kitware/
 ranger/
 btop/
-ags/
 bluetuith/
 nautilus/
 gtk-3.0/
@@ -62,3 +61,4 @@ lutgen/
 qBittorrent/
 syncthing-gtk/
 fabric/
+waybar/
