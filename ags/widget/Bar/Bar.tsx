@@ -4,12 +4,19 @@ import { Astal, Gtk, Gdk} from "astal/gtk3"
 import Tray from "gi://AstalTray"
 import Network from "gi://AstalNetwork"
 import Hyprland from "gi://AstalHyprland"
+import Bluetooth from "gi://AstalBluetooth"
 
-import Brightness from "./bar_widgets/brightness.ts"
-import AudioView from "./bar_widgets/AudioSegment.tsx"
-import BatteryLevel from "./bar_widgets/BatterySegment.tsx"
-import Media from "./bar_widgets/MediaSegment.tsx"
-import Workspaces from "./bar_widgets/WorkspacesSegment.tsx"
+import AudioView from "./AudioSegment.tsx"
+import BatteryLevel from "./BatterySegment.tsx"
+import Media from "./MediaSegment.tsx"
+import Workspaces from "./WorkspacesSegment.tsx"
+
+function BluetoothStatus(){
+    const bluetooth = Bluetooth.get_default()
+    for (const device of bluetooth.get_devices()) {
+        print(device.name)
+    }
+}
 
 function Time({ format = "%H:%M " }) {
     const time = Variable<string>("").poll(1000, () =>

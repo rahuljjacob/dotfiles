@@ -171,4 +171,35 @@ window.Bar {
         margin-bottom: 8px;
     }
 
-} 
+}
+
+window.OSD {
+    box.OSD {
+        border-radius: 8px;
+        background-color: #1a1b26;
+        padding: 10px 8px;
+        margin: 13px;
+        box-shadow: 3px 3px 7px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    icon {
+        font-size: 13px;
+        color: #7aa2f7;
+        padding-top: 7px
+    }
+
+    label {
+        font-size: 14px;
+        padding-top: 7px
+    }
+
+    levelbar {
+        trough {
+            margin: 1 .6rem;
+        }
+
+        block {
+            min-height: 1px;
+        }
+    }
+}
