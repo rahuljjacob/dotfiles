@@ -1,0 +1,22 @@
+[default]
+temperature = 6250
+
+[[period]]
+temperature = 6000
+start_time = 18:30:00
+end_time =  20:00:00
+
+[[period]]
+temperature = 5750
+start_time = 20:00:00
+end_time = 22:00:00
+
+[[period]]
+temperature = 5250
+start_time = 22:00:00
+end_time = 01:00:00
+
+[[period]]
+temperature = 4800
+start_time = 01:00:00
+end_time = 06:00:00

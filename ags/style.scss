@@ -6,15 +6,15 @@ $accent: #7AA2F7;    // Bright blue
 $highlight: #BB9AF7; // Soft purple
 $border: #414868;    // Muted blue-gray
 $warning: #F7768E;   // Tokyo Night red
+$charging:  #C3E88D;
 $radius: 7px;
 
 window.Bar {
     border: none;
     box-shadow: none;
-    background-color: rgba(26, 27, 38, 0.8); // Slight transparency
+    background-color: rgba(26, 27, 38, 0.3); // Slight transparency
     color: $fg;
-    font-size: 13px;
-    font-family: 'Barlow', "Font Awesome 6 Free";
+    font-size: 14px; font-family: 'Outfit', "Font Awesome 6 Free";
     font-weight: 400;
     border-radius: 8px;
 
@@ -59,6 +59,10 @@ window.Bar {
 
         button {
             padding: 0 4px;
+        }
+
+        icon, label {
+            color: $fg;
         }
     }
 
@@ -160,6 +164,30 @@ window.Bar {
         font-size: 10px;
         color: $warning;
     }
+
+    .Battery_Charging {
+        padding-left: 0px;
+    }
+
+    .Battery_Charging label {
+        padding-left: 0px;
+        margin-left: 10px;
+        color: $charging;
+    }
+
+    .Battery_Charging .BatteryCircle {
+        color: $fg;
+        background-color: $border;
+        color: $charging;
+        font-size: 1px;
+        margin: 2px;
+        min-width: 24px;
+    }
+
+    .Battery_Charging icon {
+        font-size: 10px;
+        color: $charging;
+    }
     
     .Time {
         font-size: 16px;
@@ -176,7 +204,7 @@ window.Bar {
 window.OSD {
     box.OSD {
         border-radius: 8px;
-        background-color: #1a1b26;
+        background-color: rgba(84, 92, 126, 0.4);
         padding: 10px 8px;
         margin: 13px;
         box-shadow: 3px 3px 7px 0 rgba(0, 0, 0, 0.4);

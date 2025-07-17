@@ -62,3 +62,15 @@ qBittorrent/
 syncthing-gtk/
 fabric/
 waybar/
+openmodelica/
+Cursor/
+Element/
+ags/.cursorignore
+bitmask/
+cava/
+jgit/
+leap/
+riseup.net/
+.luarc.json
+ghostty/
+quickshell/

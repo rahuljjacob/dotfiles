@@ -1,20 +1,30 @@
-font_family Iosevka NFM
-background_opacity 1
+# font_family Iosevka NFM
+background_opacity 0.25
 cursor_blink_interval 0
 enable_audio_bell no
 window_padding_width 1 2 0 3
 dynamic_background_opacity yes
 allow_remote_control yes
-font_size 11.0
+font_size 10.0
 map ctrl+shift+plus change_font_size all +1.0
 
 map f10 remote_control set-background-opacity 1
-map f11 remote_control set-background-opacity 0.7
+map f11 remote_control set-background-opacity 0.25
+
+confirm_os_window_close 0
 
 #tab_styling
 tab_bar_style powerline
 
 # BEGIN_KITTY_THEME
-# Sakura Night
+# Tokyo Night
 include current-theme.conf
 # END_KITTY_THEME
+
+
+# BEGIN_KITTY_FONTS
+font_family      family="Iosevka Nerd Font Mono"
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+# END_KITTY_FONTS

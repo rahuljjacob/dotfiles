@@ -1,7 +1,7 @@
 import { App } from "astal/gtk3";
 import style from "./style.scss";
 import Bar from "./widget/Bar/Bar.tsx";
-import Traything from "./widget/HelpTray.tsx";
+import Traything from "./widget/customTray/HelpTray.tsx";
 import OSD from "./widget/OSD/OSD.tsx";
 
 App.start({

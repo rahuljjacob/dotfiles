@@ -6,6 +6,7 @@ import Wp from "gi://AstalWp"
 
 function OnScreenProgress({ visible }: { visible: Variable<boolean> }) {
     const brightness = Brightness.get_default()
+    const speaker = Wp.get_default()!.get_default_speaker()
 
     const iconName = Variable("")
     const value = Variable(0)
@@ -28,7 +29,13 @@ function OnScreenProgress({ visible }: { visible: Variable<boolean> }) {
                 self.hook(brightness, "notify::screen", () =>
                     show(brightness.screen, "display-brightness-symbolic"),
                 )
-            }}
+                if (speaker) {
+                        self.hook(speaker, "notify::volume", () =>
+                            show(speaker.volume, speaker.volumeIcon),
+                        )
+                    }
+                }
+            }
             revealChild={visible()}
             transitionType={Gtk.RevealerTransitionType.SLIDE_UP}
         >
