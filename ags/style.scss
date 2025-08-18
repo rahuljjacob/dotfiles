@@ -1,9 +1,10 @@
 @use "sass:color";
+// 
 
 $bg: #1A1B26;         // Deep navy blue
 $fg: #C0CAF5;        // Light bluish-white
-$accent: #7AA2F7;    // Bright blue
-$highlight: #BB9AF7; // Soft purple
+$accent: #FF7EB6;    // Bright Pink
+$highlight: #BE95FF; // Soft purple
 $border: #414868;    // Muted blue-gray
 $warning: #F7768E;   // Tokyo Night red
 $charging:  #C3E88D;
@@ -12,7 +13,7 @@ $radius: 7px;
 window.Bar {
     border: none;
     box-shadow: none;
-    background-color: rgba(26, 27, 38, 0.3); // Slight transparency
+    background-color: rgba(22, 22, 22, 1);
     color: $fg;
     font-size: 14px; font-family: 'Outfit', "Font Awesome 6 Free";
     font-weight: 400;
@@ -204,7 +205,7 @@ window.Bar {
 window.OSD {
     box.OSD {
         border-radius: 8px;
-        background-color: rgba(84, 92, 126, 0.4);
+      background-color: rgba(22, 22, 22, 1);
         padding: 10px 8px;
         margin: 13px;
         box-shadow: 3px 3px 7px 0 rgba(0, 0, 0, 0.4);
