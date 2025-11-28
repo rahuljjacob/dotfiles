@@ -1,0 +1,125 @@
+/* Rosé Pine Palette */
+/* Base:   #191724 */
+/* Surface:#1f1d2e */
+/* Overlay:#26233a */
+/* Muted:  #6e6a86 */
+/* Subtle: #908caa */
+/* Text:   #e0def4 */
+/* Love:   #eb6f92 */
+/* Gold:   #f6c177 */
+/* Rose:   #ebbcba */
+/* Pine:   #31748f */
+/* Foam:   #9ccfd8 */
+/* Iris:   #c4a7e7 */
+
+/* Global bar styling */
+* {
+    font-family: "Outfit";
+    font-size: 15px;
+    border: none;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(25, 23, 36, 0.92);
+    color: #e0def4; /* text */
+	border-radius: 10px;
+}
+
+/* Hide window when in hidden mode */
+window#waybar.hidden {
+    opacity: 0.0;
+}
+
+/* Workspaces (Hyprland) */
+#workspaces {
+    padding: 0 6px;
+    margin: 4px 6px;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    margin: 4px 2px;
+    border-radius: 10px;
+    color: #908caa; /* subtle */
+    background: transparent;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+#workspaces button:hover {
+    background: #26233a; /* overlay */
+    color: #e0def4; /* text */
+}
+
+#workspaces button.active {
+    color: #9CCFD8;
+}
+
+#workspaces button.urgent {
+    background: #eb6f92; /* love */
+    color: #191724;
+}
+
+/* Tray */
+#tray {
+    padding: 0 8px;
+    margin: 4px 4px 4px 6px;
+}
+
+#tray > .passive {
+    opacity: 0.7;
+}
+
+#tray > .needs-attention {
+    background: #eb6f92;
+}
+
+#pulseaudio {
+    padding: 0 10px;
+    margin: 4px 4px;
+    color: #9ccfd8; /* foam */
+}
+
+#pulseaudio.muted {
+    color: #6e6a86; /* muted */
+    text-decoration: line-through;
+}
+
+/* Battery */
+#battery {
+    padding: 0 10 0 10px;
+    margin: 4px 4px;
+    color: #f6c177; /* gold */
+}
+
+#battery.charging,
+#battery.plugged {
+    color: #9ccfd8; /* foam */
+}
+
+#battery.critical:not(.charging) {
+    background: #eb6f92; /* love */
+    color: #191724; /* base */
+    font-weight: bold;
+}
+
+/* Clock */
+#clock {
+	font-size: 16px;
+    padding: 0 10px;
+    margin: 4px 6px 4px 4px;
+    color: #c4a7e7; /* iris */
+}
+
+
+/* Tooltip styling */
+tooltip {
+    background: #191724; /* base */
+    border-radius: 8px;
+    border: 1px solid #26233a;
+}
+
+tooltip label {
+    color: #e0def4;
+}
+
